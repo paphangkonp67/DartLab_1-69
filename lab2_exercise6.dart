@@ -1,27 +1,17 @@
-void greet(String name) {
-  print('Hello, $name!');
+void greet(String name){
+  print("Hello, $name!");
 }
 
-// Function 2: Multiply (Arrow Syntax)
-int multiply(int a, int b) => a * b;
+void multiply(int a,int b)=> print("Multiply result is: ${a*b}");
 
-// Function 3: Calculate Area (Named Parameters)
-double calculateArea({required double width, required double height}) {
-  return width * height;
+calculateArea(int w,int h){
+  print("Square area is : ${w*h}");
+  print("Triangle area is : ${0.5*w*h}");
+  print("Cylender area is : ${3.14*w*w*h}");  
 }
 
-void main() {
-  // Call greet
-  greet('Somchai');
-
-  // Call multiply
-  int product = multiply(7, 6);
-  print('7 * 6 = $product');
-
-  // Call calculateArea
-  double area = calculateArea(width: 5.5, height: 10.0);
-  print('Area (5.5 x 10.0) = $area');
-
-  double area2 = calculateArea(height: 8.0, width: 4.0); // ลำดับไม่สำคัญ
-  print('Area (4.0 x 8.0) = $area2');
+void main(){
+  greet('Paphangkon');
+  multiply(2, 5);
+  calculateArea(5, 10);
 }
